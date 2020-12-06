@@ -1,8 +1,11 @@
 import logo from './logo.svg';
 import './App.css';
 import { withAuthenticator } from 'aws-amplify-react';
-
+import Amplify, { Auth } from 'aws-amplify';
+import awsconfig from './aws-exports';
+import '@aws-amplify/ui/dist/style.css';
 function App() {
+  Amplify.configure(awsconfig);
   return (
     <div className="App">
       <header className="App-header">
